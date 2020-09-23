@@ -1,6 +1,7 @@
 ﻿using System;
 using CommandPattern;
 using ObserverPattern;
+using StatePattern;
 
 namespace CSharpDesignPatterns
 {
@@ -8,9 +9,21 @@ namespace CSharpDesignPatterns
     {
         static void Main(string[] args)
         {
-            RunCommand();
+            RunState();
 
             Console.ReadLine();
+        }
+
+        public static void RunState()
+        {
+            ATMMachine atm = new ATMMachine();
+            atm.insertCard();
+            atm.ejectCard();
+            atm.insertCard();
+            atm.insertPin(1234);
+            atm.requestCash(2000);
+            atm.insertCard();
+            atm.insertPin(1234);
         }
 
         public static void RunCommand()

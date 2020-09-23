@@ -7,9 +7,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommandPattern\CommandPattern.csproj" />
+    <ProjectReference Include="..\ObserverPattern\ObserverPattern.csproj" />
     <ProjectReference Include="..\StatePattern\StatePattern.csproj" />
     <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj" />
-    <ProjectReference Include="..\Strategy\ObserverPattern.csproj" />
   </ItemGroup>
 
 </Project>

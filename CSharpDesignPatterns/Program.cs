@@ -10,7 +10,7 @@ namespace CSharpDesignPatterns
     {
         static void Main(string[] args)
         {
-            RunStrategy();
+            RunObserver();
 
 
             Console.ReadLine();

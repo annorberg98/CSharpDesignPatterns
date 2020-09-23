@@ -2,6 +2,7 @@
 using CommandPattern;
 using ObserverPattern;
 using StatePattern;
+using StrategyPattern;
 
 namespace CSharpDesignPatterns
 {
@@ -9,9 +10,23 @@ namespace CSharpDesignPatterns
     {
         static void Main(string[] args)
         {
-            RunState();
+            RunStrategy();
+
 
             Console.ReadLine();
+        }
+
+        public static void RunStrategy()
+        {
+            Animal sparky = new Dog();
+            Animal tweety = new Bird();
+
+            Console.WriteLine("Dog: " + sparky.TryToFly());
+            Console.WriteLine("Bird: " + tweety.TryToFly());
+
+            sparky.FlyingType = new ItFlys();
+
+            Console.WriteLine("Dog: " + sparky.TryToFly());
         }
 
         public static void RunState()
